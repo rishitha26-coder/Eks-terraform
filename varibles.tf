@@ -147,13 +147,13 @@ locals {
 variable "authorized_source_ranges" {
   type        = list(string)
   description = "Addresses or CIDR blocks which are allowed to connect to the Vault IP address. The default behavior is to allow anyone (10.0.0.0/0) access. You should restrict access to external IPs that need to access the Vault cluster."
-  # This defaults to the vpn addresses for mogo and moka
+  # This defaults to the vpn addresses for test and moka
   default     = [
-    # Mogo VPN
+    # test VPN
     "209.82.73.82/32", "209.82.74.66/32", "54.187.227.249/32", "44.238.169.62/32", "3.97.193.96/32", "35.182.107.146/32",
     # Artifactory
     "34.212.154.95/32",
-    # ETL Servers, CRM, and legacy mogo services
+    # ETL Servers, CRM, and legacy test services
     "54.187.253.88/32", "54.187.170.171/32", "54.186.92.116/32",
     # Buildkite Agent
     "35.166.12.86/32",
@@ -231,7 +231,7 @@ variable "git_remote_origin_url" {
 
 variable "costcentre" {
   type = string
-  default = "Mogo DevOps"
+  default = "test DevOps"
   }
 
 variable "aws-eks-image-account" {
@@ -266,7 +266,7 @@ variable "instance_types" {
 variable "eks_ssh_key" {
   # This is the nonproduction key. This key should be specified in production!
   type = string
-  default = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDBB1K0TNjPMQL+AVAUk3ZTanfvv+g+TMiHV0+mQ4MYweVUVYv1joZBLaKhimZQH1hdIQzg3cAdI3xHSZGy95l6myhMlz+0VPUi31rDzxAMbAGr9bUwqE/bzMNn1AC1auh5bzR9yTMAXiawGSZOmqKG+cww73oSQ/WALrNVsN7RYfPk/2r//oGMCTK59JglotHDS/LwOZq/G8/MLpJVQ0wszya3ggLwdRcMVioXCEhcMmLkVfmi4nZIlnofBvUKPw4OEtIHwWTmGRtplmu5Qj8PscmylntuS/GVHTxyTQY6IlInPF5LDw58Df3wpr8KAdzkmbggoNizWZ6dPaRBcad0iyV974pFLQmhVt/bGye9wEsWzCBwqyO5uuNKd8UOxAezo/7JZQ4rZ4QtCMrznUkCVynfINMFP/O5xDhlNZCDf7UDYQMQjRONyNqo7Kcd68lp3wzyj371rit2J9G4p8bGT+9QCTYqwC91hBtRZ2KRz8r4ffvlZj8+wKPdOHZK1UGX3HdS6GO/ugRHHhzIuQIhU1FnkPLxSTkChGjBPi+AV5/SMhJQbsCUh5+G5lKY6pYg5KKLkQDJZtOw9rTeo038KPXIZzwASdcybfOAYmbL/syMz1C7TpVddA4P0KSpE8+85rZiquIYvv1pI/GAIluK0OeQjjs+T1Bd8U+7pVgNDw== ist-devops@mogo.ca"
+  default = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDBB1K0TNjPMQL+AVAUk3ZTanfvv+g+TMiHV0+mQ4MYweVUVYv1joZBLaKhimZQH1hdIQzg3cAdI3xHSZGy95l6myhMlz+0VPUi31rDzxAMbAGr9bUwqE/bzMNn1AC1auh5bzR9yTMAXiawGSZOmqKG+cww73oSQ/WALrNVsN7RYfPk/2r//oGMCTK59JglotHDS/LwOZq/G8/MLpJVQ0wszya3ggLwdRcMVioXCEhcMmLkVfmi4nZIlnofBvUKPw4OEtIHwWTmGRtplmu5Qj8PscmylntuS/GVHTxyTQY6IlInPF5LDw58Df3wpr8KAdzkmbggoNizWZ6dPaRBcad0iyV974pFLQmhVt/bGye9wEsWzCBwqyO5uuNKd8UOxAezo/7JZQ4rZ4QtCMrznUkCVynfINMFP/O5xDhlNZCDf7UDYQMQjRONyNqo7Kcd68lp3wzyj371rit2J9G4p8bGT+9QCTYqwC91hBtRZ2KRz8r4ffvlZj8+wKPdOHZK1UGX3HdS6GO/ugRHHhzIuQIhU1FnkPLxSTkChGjBPi+AV5/SMhJQbsCUh5+G5lKY6pYg5KKLkQDJZtOw9rTeo038KPXIZzwASdcybfOAYmbL/syMz1C7TpVddA4P0KSpE8+85rZiquIYvv1pI/GAIluK0OeQjjs+T1Bd8U+7pVgNDw== ist-devops@test.ca"
   }
 
 variable "create_public_routes" {

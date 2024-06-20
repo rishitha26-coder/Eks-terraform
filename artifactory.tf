@@ -1,6 +1,6 @@
 variable "app_namespaces" {
   type = list
-  default = [ "trade", "mogo" ]
+  default = [ "trade", "test" ]
   }
 
 resource "kubernetes_namespace" "app" {

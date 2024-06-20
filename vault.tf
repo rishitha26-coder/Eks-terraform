@@ -25,7 +25,7 @@ data "template_file" "vault-values" {
 #             service.beta.kubernetes.io/aws-load-balancer-healthcheck-port: "8200"
 #             service.beta.kubernetes.io/aws-load-balancer-traffic-port: "8200" 
 #             kubernetes.io/ingress.class: alb
-#            service.beta.kubernetes.io/sandbox.mogodevops.com
+#            service.beta.kubernetes.io/sandbox.testdevops.com
 #            service.beta.kubernetes.io/aws-load-balancer-type: nlb-ip
 #            external-dns.alpha.kubernetes.io/ttl: "30"
 #            service.beta.kubernetes.io/aws-load-balancer-scheme: "internet-facing"

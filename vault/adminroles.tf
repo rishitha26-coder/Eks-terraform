@@ -1,18 +1,18 @@
-resource "vault_github_team" "devops-mogo" {
+resource "vault_github_team" "devops-test" {
   backend  = "github"
   team     = "devops"
   policies = ["default", "admin"]
 }
 
-resource "vault_github_user" "mkroeze-mogo" {
+resource "vault_github_user" "mkroeze-test" {
   backend  = "github"
   user     = "mkroeze"
   policies = ["default", "tokenadmin","trade-token-service-policy"]
 }
 
-resource "vault_github_user" "ajoshi-moka-mogo" {
+resource "vault_github_user" "ajoshi-moka-test" {
   backend  = "github"
-  user     = "ajoshi-moka-mogo"
+  user     = "ajoshi-moka-test"
   policies = ["default", "tokenadmin","trade-token-service-policy"]
 }
 
